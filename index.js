@@ -70,10 +70,14 @@ while (opcion != 4) {
       break;
     case 2:
       let precioMaximo = parseInt(prompt("Ingrese precio MAXIMO a pagar: "));
-      const equiposFiltradosPorPrecio = productos.filter(
-        (el) => el.precio < precioMaximo
-      );
-      console.table(equiposFiltradosPorPrecio);
+      if (precioMaximo >= 200) {
+        const equiposFiltradosPorPrecio = productos.filter(
+          (el) => el.precio < precioMaximo
+        );
+        console.table(equiposFiltradosPorPrecio);
+      } else {
+        console.log("INGRESE UN VALOR MAYOR A 200");
+      }
       break;
     case 3:
       let idABuscar = parseInt(
