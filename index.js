@@ -66,14 +66,14 @@ let suma = 0;
 while (opcion != 4) {
   switch (opcion) {
     case 1:
-      console.log(productos);
+      console.table(productos);
       break;
     case 2:
       let precioMaximo = parseInt(prompt("Ingrese precio MAXIMO a pagar: "));
       const equiposFiltradosPorPrecio = productos.filter(
         (el) => el.precio < precioMaximo
       );
-      console.log(equiposFiltradosPorPrecio);
+      console.table(equiposFiltradosPorPrecio);
       break;
     case 3:
       let idABuscar = parseInt(
